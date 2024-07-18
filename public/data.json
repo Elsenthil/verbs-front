@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "infinitive": "be",
+    "preterit": "was/were",
+    "past_participle": "been",
+    "translation": "être"
+  },
+  {
+    "id": 2,
+    "infinitive": "become",
+    "preterit": "became",
+    "past_participle": "become",
+    "translation": "devenir"
+  },
+  {
+    "id": 3,
+    "infinitive": "begin",
+    "preterit": "began",
+    "past_participle": "begun",
+    "translation": "commencer"
+  },
+  {
+    "id": 4,
+    "infinitive": "break",
+    "preterit": "broke",
+    "past_participle": "broken",
+    "translation": "casser"
+  },
+  {
+    "id": 5,
+    "infinitive": "bring",
+    "preterit": "brought",
+    "past_participle": "brought",
+    "translation": "apporter"
+  },
+  {
+    "id": 6,
+    "infinitive": "build",
+    "preterit": "built",
+    "past_participle": "built",
+    "translation": "construire"
+  },
+  {
+    "id": 7,
+    "infinitive": "buy",
+    "preterit": "bought",
+    "past_participle": "bought",
+    "translation": "acheter"
+  },
+  {
+    "id": 8,
+    "infinitive": "catch",
+    "preterit": "caught",
+    "past_participle": "caught",
+    "translation": "attraper"
+  },
+  {
+    "id": 9,
+    "infinitive": "choose",
+    "preterit": "chose",
+    "past_participle": "chosen",
+    "translation": "choisir"
+  },
+  {
+    "id": 10,
+    "infinitive": "come",
+    "preterit": "came",
+    "past_participle": "come",
+    "translation": "venir"
+  },
+  {
+    "id": 11,
+    "infinitive": "cost",
+    "preterit": "cost",
+    "past_participle": "cost",
+    "translation": "coûter"
+  },
+  {
+    "id": 12,
+    "infinitive": "cut",
+    "preterit": "cut",
+    "past_participle": "cut",
+    "translation": "couper"
+  },
+  {
+    "id": 13,
+    "infinitive": "do",
+    "preterit": "did",
+    "past_participle": "done",
+    "translation": "faire"
+  },
+  {
+    "id": 14,
+    "infinitive": "draw",
+    "preterit": "drew",
+    "past_participle": "drawn",
+    "translation": "dessiner"
+  },
+  {
+    "id": 15,
+    "infinitive": "drink",
+    "preterit": "drank",
+    "past_participle": "drunk",
+    "translation": "boire"
+  }
+]
