@@ -146,7 +146,7 @@ export default function Home() {
   return (
     <Container maxWidth="xl">
       <h1>Verbes irréguliers</h1>
-      <div style={{ marginBottom: "1rem" }}>
+      <div style={{ marginBottom: "1rem", display: "flex" }}>
         <VerbsFormDialog color="secondary" onSubmit={handleFormSubmit} />
         <MultiDeleteFormDialog
           selection={rowSelectionModel}
