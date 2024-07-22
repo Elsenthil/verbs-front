@@ -24,7 +24,7 @@ export default function VerbsFormDialog({ onSubmit }) {
         "Content-Type": "application/json",
         //"X-CSRF-Token": csrfToken,
       },
-      body: data,
+      body: JSON.stringify(data),
       credentials: "include",
     });
     return response.json();
@@ -35,14 +35,11 @@ export default function VerbsFormDialog({ onSubmit }) {
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
 
-    postData("http://localhost:8765/apis/addVerb", formData.entries()).then(
-      (data) => {
-        console.log(data);
-        console.log(formData);
-        console.log(formJson);
-        onSubmit(formJson); // Appel du callback passé en prop avec les données du formulaire
-      }
-    );
+    postData("http://localhost:8765/apis/addVerb", formJson).then((data) => {
+      console.log(data);
+
+      onSubmit(formJson); // Appel du callback passé en prop avec les données du formulaire
+    });
 
     handleClose();
   };

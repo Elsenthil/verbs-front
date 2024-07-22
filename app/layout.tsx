@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
-import ResponsiveAppBar from "./components/ui/ResponsiveAppBar";
+import App from "./app";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={inter.className}>
-        <ResponsiveAppBar></ResponsiveAppBar>
-        <main>{children}</main>
-        <footer>
-          <h3>Footer</h3>
-        </footer>
+        <App children={children} />
       </body>
     </html>
   );
