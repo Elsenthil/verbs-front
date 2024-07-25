@@ -17,8 +17,9 @@ import AdbIcon from "@mui/icons-material/Adb";
 import Link from "next/link";
 
 const pages = [
-  { label: "Accueil", target: "/" },
-  { label: "Verbes", target: "/verbs" },
+  { id: 1, label: "Accueil", target: "/" },
+  { id: 2, label: "Verbes", target: "/verbs" },
+  { id: 3, label: "Tester son niveau", target: "/tests" },
 ];
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -128,13 +129,14 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page.target}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page.label}
-              </Button>
+              <Link key={page.id} href={page.target}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page.label}
+                </Button>
+              </Link>
             ))}
           </Box>
 
