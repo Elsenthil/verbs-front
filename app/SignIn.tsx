@@ -11,13 +11,16 @@ import {
   Container,
   Button,
 } from "@mui/material";
+import { useAuth } from "../contexts/AuthContext";
 
-export default function SignIn({ handleLoginSubmit }) {
+export default function SignIn() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const formJson = Object.fromEntries(formData.entries());
-    handleLoginSubmit(formJson);
+    login(username, password);
   };
 
   return (
@@ -26,7 +29,15 @@ export default function SignIn({ handleLoginSubmit }) {
       <form onSubmit={handleSubmit}>
         <FormControl>
           <InputLabel htmlFor="username">Identifiant</InputLabel>
-          <Input id="username" name="username" aria-describedby="username" />
+          <Input
+            id="username"
+            name="username"
+            value={username}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            aria-describedby="username"
+          />
         </FormControl>
         <FormControl>
           <InputLabel htmlFor="password">Mot de passe</InputLabel>
@@ -34,6 +45,10 @@ export default function SignIn({ handleLoginSubmit }) {
             id="password"
             name="password"
             type="password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
             aria-describedby="password"
           />
         </FormControl>
